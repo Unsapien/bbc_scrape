@@ -1,10 +1,10 @@
-FROM python:3
+FROM python:3.8-alpine
 
-RUN mkdir /code/
+RUN mkdir /code
 
-RUN pip install requests
-RUN pip install bs4
+COPY requirements.txt /code/
+RUN pip install -r /code/requirements.txt
 
-COPY C:\users\garethd\projects\news_scrape_travis\bbc_scrape.py /code
+COPY bbc_scrape.py /code
 CMD ["python", "/code/bbc_scrape.py"]
 
