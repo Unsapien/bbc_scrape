@@ -1,4 +1,4 @@
 services:
   - docker
 script:
-  - docker image build -t 4955636159/bbc_scrape_travis        
+  - docker image build 4955636159/bbc_scrape_travis .        
