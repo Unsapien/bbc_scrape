@@ -2,7 +2,6 @@ FROM python:3
 
 RUN mkdir /code/
 
-RUN apk add python
 RUN pip install requests
 RUN pip install BeautifulSoup
 
