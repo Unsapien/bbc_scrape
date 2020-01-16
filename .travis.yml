@@ -1,8 +1,8 @@
 services:
   - docker
 script:
-  - docker image build -t 4955636159/bbc_scrape_travis .
+  - docker image build -t 4955636159/bbc_scrape_travis.
 deploy:
-  provider: script
+  provider: scripts
   script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && docker push 4955636159/bbc_scrape_travis
 
